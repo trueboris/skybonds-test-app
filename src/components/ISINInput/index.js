@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose, lifecycle, withState, withHandlers } from 'recompose';
 import { Input } from 'antd';
-import { gerRandomBondData, currentBondDataSelector } from '../../redux/bonds';
+import { getRandomBondData, currentBondDataSelector } from '../../redux/bonds';
 
 const Search = Input.Search;
 
@@ -20,14 +20,14 @@ const ISINInputView = props => (
 
 ISINInputView.propTypes = {
   bondData: PropTypes.object,
-  gerRandomBondData: PropTypes.func,
+  getRandomBondData: PropTypes.func,
 };
 
 const connectEnhancer = connect(
   state => ({
     bondData: currentBondDataSelector(state),
   }),
-  { gerRandomBondData },
+  { getRandomBondData },
 );
 
 const withStateEnhancer = withState(
@@ -37,7 +37,7 @@ const withStateEnhancer = withState(
 );
 
 const withHandlersEnhancer = withHandlers({
-  onISINSearch: props => () => props.gerRandomBondData(),
+  onISINSearch: props => () => props.getRandomBondData(),
 
   onSearchInputChange: props => event =>
     props.onSearchInputValueChange(event.target.value),

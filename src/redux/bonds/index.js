@@ -44,9 +44,9 @@ const getBondData = url => async dispatch => {
   }
 };
 
-const gerRandomBondData = () =>
-  getBondData(pickRandomPropertyFromObject(bondsConfig).api);
+const getRandomBondData = () =>
+  getBondData(pickRandomPropertyFromObject(bondsConfig).url);
 
 const currentBondDataSelector = state => state.bondsReducer.currentBondData;
 
-export { gerRandomBondData, bondsReducer, currentBondDataSelector };
+export { getRandomBondData, bondsReducer, currentBondDataSelector };

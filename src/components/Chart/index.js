@@ -34,7 +34,12 @@ const ChartView = props =>
         stroke={chartConfig.styles.cartesianGridStrokeColor}
         strokeDasharray={chartConfig.styles.cartesianGridStrokeDasharray}
       />
-      <XAxis dataKey={chartConfig.yAxis || 'date'} />
+      <XAxis
+        dataKey={chartConfig.xAxis || 'date'}
+        interval="preserveEnd"
+        minTickGap={10}
+        tickCount={10}
+      />
       <YAxis dataKey={props.indicator} />
       <Tooltip />
     </LineChart>

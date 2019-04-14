@@ -18,7 +18,7 @@ const BondInfoView = props => {
   return (
     <Card>
       <h1 className="bond-info__heading">
-        <span>{props.bondData.name}</span>,{' '}
+        <span>{props.bondData.name}</span>,
         <span className="with-margin-left">{props.bondData.couponRate}</span>,
         <span className="with-margin-left">{props.bondData.currentYield}</span>
       </h1>

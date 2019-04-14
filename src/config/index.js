@@ -1,5 +1,5 @@
 const chartConfig = {
-  yAxis: 'date',
+  xAxis: 'date',
 
   indicators: {
     YIELD: 'yield',
@@ -33,22 +33,22 @@ const api = 'http://www.mocky.io/v2/';
 const bondsConfig = {
   lukoil: {
     isin: 'XS0554659671',
-    api: api + '5caf64393400009b24ab730d',
+    url: api + '5caf64393400009b24ab730d',
   },
 
   sberbank: {
     isin: 'XS0743596040',
-    api: api + '5caf651c3400009b24ab7311',
+    url: api + '5caf651c3400009b24ab7311',
   },
 
   alfabank: {
     isin: 'XS1762980065',
-    api: api + '5cb046343100005500e132f4',
+    url: api + '5cb046343100005500e132f4',
   },
 
   gazprom: {
     isin: 'XS0191754729',
-    api: api + '5cb094843100003f37e13559',
+    url: api + '5cb094843100003f37e13559',
   },
 };
 
