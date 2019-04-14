@@ -1,0 +1,12 @@
+.bond-info__heading {
+  display: inline-flex;
+}
+
+.bond-info__currency {
+  display: inline-flex;
+  color: #999999;
+}
+
+.with-margin-left {
+  margin-left: 8px;
+}
