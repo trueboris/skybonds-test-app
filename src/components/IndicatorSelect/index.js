@@ -51,4 +51,5 @@ const IndicatorSelect = compose(
   withHandlersEnhancer,
 )(IndicatorSelectView);
 
+export { IndicatorSelectView };
 export default IndicatorSelect;

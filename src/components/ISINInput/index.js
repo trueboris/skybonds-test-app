@@ -58,4 +58,5 @@ const ISINInput = compose(
   lifecycleEnhancer,
 )(ISINInputView);
 
+export { ISINInputView };
 export default ISINInput;

@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ant-radio-group ant-radio-group-outline ant-radio-group-large"
+>
+  <label
+    className="ant-radio-button-wrapper"
+  >
+    <span
+      className="ant-radio-button"
+      style={Object {}}
+    >
+      <input
+        checked={false}
+        className="ant-radio-button-input"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="week"
+      />
+      <span
+        className="ant-radio-button-inner"
+      />
+    </span>
+    <span>
+      week
+    </span>
+  </label>
+  <label
+    className="ant-radio-button-wrapper"
+  >
+    <span
+      className="ant-radio-button"
+      style={Object {}}
+    >
+      <input
+        checked={false}
+        className="ant-radio-button-input"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="month"
+      />
+      <span
+        className="ant-radio-button-inner"
+      />
+    </span>
+    <span>
+      month
+    </span>
+  </label>
+  <label
+    className="ant-radio-button-wrapper"
+  >
+    <span
+      className="ant-radio-button"
+      style={Object {}}
+    >
+      <input
+        checked={false}
+        className="ant-radio-button-input"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="quarter"
+      />
+      <span
+        className="ant-radio-button-inner"
+      />
+    </span>
+    <span>
+      quarter
+    </span>
+  </label>
+  <label
+    className="ant-radio-button-wrapper"
+  >
+    <span
+      className="ant-radio-button"
+      style={Object {}}
+    >
+      <input
+        checked={false}
+        className="ant-radio-button-input"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="year"
+      />
+      <span
+        className="ant-radio-button-inner"
+      />
+    </span>
+    <span>
+      year
+    </span>
+  </label>
+  <label
+    className="ant-radio-button-wrapper"
+  >
+    <span
+      className="ant-radio-button"
+      style={Object {}}
+    >
+      <input
+        checked={false}
+        className="ant-radio-button-input"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="max"
+      />
+      <span
+        className="ant-radio-button-inner"
+      />
+    </span>
+    <span>
+      max
+    </span>
+  </label>
+</div>
+`;

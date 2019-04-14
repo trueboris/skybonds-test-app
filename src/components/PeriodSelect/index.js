@@ -49,4 +49,5 @@ const PeriodSelect = compose(
   withHandlersEnhancer,
 )(PeriodSelectView);
 
+export { PeriodSelectView };
 export default PeriodSelect;
