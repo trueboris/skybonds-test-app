@@ -38,6 +38,10 @@ const getBondData = url => async dispatch => {
   try {
     const response = await makeRequest(url);
 
+    if (currentBondData.isin === response.data.isin) {
+      getRandomBondData(response.data);
+    }
+
     dispatch({ type: GET_BOND_DATA_SUCCESS, payload: response.data });
   } catch (error) {
     dispatch({ type: GET_BOND_DATA_ERROR, payload: error });
