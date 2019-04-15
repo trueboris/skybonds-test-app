@@ -1,5 +1,10 @@
 const chartConfig = {
-  xAxis: "date",
+  xAxis: {
+    dataKey: "date",
+    interval: "preserveEnd",
+    minTickGap: 10,
+    tickCount: 10
+  },
 
   indicators: {
     YIELD: "yield",
@@ -28,6 +33,10 @@ const chartConfig = {
   }
 };
 
+const inputsConfig = {
+  size: "large"
+};
+
 const api = "http://www.mocky.io/v2/";
 
 const bondsConfig = {
@@ -52,4 +61,4 @@ const bondsConfig = {
   }
 };
 
-export { chartConfig, bondsConfig };
+export { chartConfig, inputsConfig, bondsConfig };

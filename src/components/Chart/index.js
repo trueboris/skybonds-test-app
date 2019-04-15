@@ -35,10 +35,10 @@ const ChartView = props =>
         strokeDasharray={chartConfig.styles.cartesianGridStrokeDasharray}
       />
       <XAxis
-        dataKey={chartConfig.xAxis || "date"}
-        interval="preserveEnd"
-        minTickGap={10}
-        tickCount={10}
+        dataKey={chartConfig.xAxis.dataKey || "date"}
+        interval={chartConfig.xAxis.interval || "preserveEnd"}
+        minTickGap={chartConfig.xAxis.minTickGap || 10}
+        tickCount={chartConfig.xAxis.tickCount || 10}
       />
       <YAxis dataKey={props.indicator} />
       <Tooltip />

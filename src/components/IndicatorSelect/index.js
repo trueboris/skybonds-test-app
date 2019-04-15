@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { compose, withHandlers } from "recompose";
 import { Select } from "antd";
 import { setIndicator, currentIndicatorSelector } from "../../redux/chart";
-import { chartConfig } from "../../config";
+import { chartConfig, inputsConfig } from "../../config";
 
 const Option = Select.Option;
 
@@ -22,7 +22,7 @@ const IndicatorSelectView = props =>
     <Select
       defaultValue={props.indicator}
       onChange={props.onIndicatorChange}
-      size="large"
+      size={inputsConfig.size || "large"}
     >
       {Object.keys(chartConfig.indicators).map(getIndicatorSelectOptions)}
     </Select>

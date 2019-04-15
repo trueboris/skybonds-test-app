@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { compose, withHandlers } from "recompose";
 import { Radio } from "antd";
 import { setPeriod, currentPeriodSelector } from "../../redux/chart";
-import { chartConfig } from "../../config";
+import { chartConfig, inputsConfig } from "../../config";
 
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
@@ -20,7 +20,7 @@ const PeriodSelectView = props =>
     <RadioGroup
       defaultValue={props.period}
       onChange={props.onPeriodChange}
-      size="large"
+      size={inputsConfig.size || "large"}
     >
       {Object.keys(chartConfig.periods).map(getPeriodSelectButtons)}
     </RadioGroup>
