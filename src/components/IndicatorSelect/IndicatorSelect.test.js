@@ -1,9 +1,9 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import { IndicatorSelectView } from './index';
-import { chartConfig } from '../../config';
+import React from "react";
+import renderer from "react-test-renderer";
+import { IndicatorSelectView } from "./index";
+import { chartConfig } from "../../config";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const element = renderer
     .create(<IndicatorSelectView defaultValue={chartConfig.indicators.PRICE} />)
     .toJSON();

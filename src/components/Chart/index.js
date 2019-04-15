@@ -1,22 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { compose, withProps } from 'recompose';
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { compose, withProps } from "recompose";
 import {
   LineChart,
   Line,
   CartesianGrid,
   XAxis,
   YAxis,
-  Tooltip,
-} from 'recharts';
+  Tooltip
+} from "recharts";
 import {
   currentIndicatorSelector,
-  currentPeriodSelector,
-} from '../../redux/chart';
-import { currentBondDataSelector } from '../../redux/bonds';
-import { chartConfig } from '../../config';
-import makeBondDataWithPeriod from '../../utils/makeBondDataWithPeriod';
+  currentPeriodSelector
+} from "../../redux/chart";
+import { currentBondDataSelector } from "../../redux/bonds";
+import { chartConfig } from "../../config";
+import makeBondDataWithPeriod from "../../utils/makeBondDataWithPeriod";
 
 const ChartView = props =>
   chartConfig.size && chartConfig.styles ? (
@@ -35,7 +35,7 @@ const ChartView = props =>
         strokeDasharray={chartConfig.styles.cartesianGridStrokeDasharray}
       />
       <XAxis
-        dataKey={chartConfig.xAxis || 'date'}
+        dataKey={chartConfig.xAxis || "date"}
         interval="preserveEnd"
         minTickGap={10}
         tickCount={10}
@@ -53,25 +53,25 @@ ChartView.propTypes = {
   bondData: PropTypes.object,
   bondDataWithPeriodSelected: PropTypes.array,
   indicator: PropTypes.string,
-  period: PropTypes.string,
+  period: PropTypes.string
 };
 
 const connectEnhancer = connect(state => ({
   bondData: currentBondDataSelector(state),
   indicator: currentIndicatorSelector(state),
-  period: currentPeriodSelector(state),
+  period: currentPeriodSelector(state)
 }));
 
 const withPropsEnhancer = withProps(props => ({
   bondDataWithPeriodSelected: makeBondDataWithPeriod(
     props.bondData.data,
-    props.period,
-  ),
+    props.period
+  )
 }));
 
 const Chart = compose(
   connectEnhancer,
-  withPropsEnhancer,
+  withPropsEnhancer
 )(ChartView);
 
 export default Chart;

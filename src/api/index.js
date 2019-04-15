@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 const makeRequest = url => axios.get(url);
 

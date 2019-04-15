@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { Card } from 'antd';
-import { currentBondDataSelector } from '../../redux/bonds';
-import isEmptyObject from '../../utils/isEmptyObject';
-import './bond-info.css';
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { Card } from "antd";
+import { currentBondDataSelector } from "../../redux/bonds";
+import isEmptyObject from "../../utils/isEmptyObject";
+import "./bond-info.css";
 
 const BondInfoView = props => {
   if (isEmptyObject(props.bondData)) {
@@ -44,12 +44,12 @@ BondInfoView.propTypes = {
     couponRate: PropTypes.number,
     currentYield: PropTypes.number,
     currency: PropTypes.string,
-    maturityDate: PropTypes.string,
-  }),
+    maturityDate: PropTypes.string
+  })
 };
 
 const connectEnhancer = connect(state => ({
-  bondData: currentBondDataSelector(state),
+  bondData: currentBondDataSelector(state)
 }));
 
 const BondInfo = connectEnhancer(BondInfoView);

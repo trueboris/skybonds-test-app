@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { compose, withHandlers } from 'recompose';
-import { Select } from 'antd';
-import { setIndicator, currentIndicatorSelector } from '../../redux/chart';
-import { chartConfig } from '../../config';
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { compose, withHandlers } from "recompose";
+import { Select } from "antd";
+import { setIndicator, currentIndicatorSelector } from "../../redux/chart";
+import { chartConfig } from "../../config";
 
 const Option = Select.Option;
 
 const getIndicatorSelectOptions = (indicator, index) => (
   <Option
-    key={indicator + '_' + index}
+    key={indicator + "_" + index}
     value={chartConfig.indicators[indicator]}
   >
     {chartConfig.indicators[indicator]}
@@ -34,21 +34,21 @@ const IndicatorSelectView = props =>
 
 IndicatorSelectView.propTypes = {
   indicator: PropTypes.string,
-  onIndicatorChange: PropTypes.func,
+  onIndicatorChange: PropTypes.func
 };
 
 const connectEnhancer = connect(
   state => ({ indicator: currentIndicatorSelector(state) }),
-  { setIndicator },
+  { setIndicator }
 );
 
 const withHandlersEnhancer = withHandlers({
-  onIndicatorChange: props => event => props.setIndicator(event),
+  onIndicatorChange: props => event => props.setIndicator(event)
 });
 
 const IndicatorSelect = compose(
   connectEnhancer,
-  withHandlersEnhancer,
+  withHandlersEnhancer
 )(IndicatorSelectView);
 
 export { IndicatorSelectView };

@@ -1,8 +1,8 @@
-import { chartConfig } from '../config';
+import { chartConfig } from "../config";
 
 const makeBondDataWithPeriod = (
   bondsData,
-  period = chartConfig.periods.MONTH || 'MONTH',
+  period = chartConfig.periods.MONTH || "MONTH"
 ) => {
   if (!(bondsData instanceof Array)) {
     return [];
