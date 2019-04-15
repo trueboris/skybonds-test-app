@@ -20,24 +20,7 @@ const ChartCardView = props =>
   ) : null;
 
 ChartCardView.propTypes = {
-  bondData: PropTypes.shape({
-    isin: PropTypes.string,
-    name: PropTypes.string,
-    fullName: PropTypes.string,
-    industry: PropTypes.string,
-    couponRate: PropTypes.number,
-    currentYield: PropTypes.number,
-    currency: PropTypes.string,
-    maturityDate: PropTypes.string,
-    data: PropTypes.arrayOf(
-      PropTypes.shape({
-        date: PropTypes.string,
-        price: PropTypes.number,
-        spread: PropTypes.number,
-        yield: PropTypes.number
-      })
-    )
-  })
+  bondData: PropTypes.object
 };
 
 const connectEnhancer = connect(state => ({

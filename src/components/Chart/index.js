@@ -51,7 +51,14 @@ const ChartView = props =>
 
 ChartView.propTypes = {
   bondData: PropTypes.object,
-  bondDataWithPeriodSelected: PropTypes.array,
+  bondDataWithPeriodSelected: PropTypes.arrayOf(
+    PropTypes.shape({
+      date: PropTypes.string,
+      price: PropTypes.number,
+      spread: PropTypes.number,
+      yield: PropTypes.number
+    })
+  ),
   indicator: PropTypes.string,
   period: PropTypes.string
 };
