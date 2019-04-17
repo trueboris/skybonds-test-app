@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { compose, withHandlers } from "recompose";
 import { Select } from "antd";
-import { setIndicator, currentIndicatorSelector } from "../../redux/chart";
+import { setIndicator } from "../../actions/chart";
+import { currentIndicatorSelector } from "../../selectors/chart";
 import { chartConfig, inputsConfig } from "../../config";
 
 const Option = Select.Option;

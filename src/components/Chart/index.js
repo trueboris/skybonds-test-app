@@ -13,8 +13,8 @@ import {
 import {
   currentIndicatorSelector,
   currentPeriodSelector
-} from "../../redux/chart";
-import { currentBondDataSelector } from "../../redux/bonds";
+} from "../../selectors/chart";
+import { currentBondDataSelector } from "../../selectors/bonds";
 import { chartConfig } from "../../config";
 import makeBondDataWithPeriod from "../../utils/makeBondDataWithPeriod";
 

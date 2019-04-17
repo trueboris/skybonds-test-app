@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { compose, withHandlers } from "recompose";
 import { Radio } from "antd";
-import { setPeriod, currentPeriodSelector } from "../../redux/chart";
+import { setPeriod } from "../../actions/chart";
+import { currentPeriodSelector } from "../../selectors/chart";
 import { chartConfig, inputsConfig } from "../../config";
 
 const RadioButton = Radio.Button;

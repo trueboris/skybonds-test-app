@@ -5,7 +5,7 @@ import { Card } from "antd";
 import Chart from "../Chart";
 import IndicatorSelect from "../IndicatorSelect";
 import PeriodSelect from "../PeriodSelect";
-import { currentBondDataSelector } from "../../redux/bonds";
+import { currentBondDataSelector } from "../../selectors/bonds";
 import isEmptyObject from "../../utils/isEmptyObject";
 
 const ChartCardView = props =>

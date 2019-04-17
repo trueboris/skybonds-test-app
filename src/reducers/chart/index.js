@@ -1,8 +1,5 @@
 import { chartConfig } from "../../config";
 
-const SET_INDICATOR = "SET_INDICATOR";
-const SET_PERIOD = "SET_PERIOD";
-
 const initialState = {
   currentIndicator: chartConfig.indicators
     ? chartConfig.indicators.PRICE
@@ -29,23 +26,4 @@ const chartReducer = (state = initialState, action) => {
   return handler ? handler(state, action) : state;
 };
 
-const setIndicator = indicator => ({
-  type: SET_INDICATOR,
-  payload: indicator
-});
-
-const setPeriod = period => ({
-  type: SET_PERIOD,
-  payload: period
-});
-
-const currentIndicatorSelector = state => state.chartReducer.currentIndicator;
-const currentPeriodSelector = state => state.chartReducer.currentPeriod;
-
-export {
-  setIndicator,
-  setPeriod,
-  currentIndicatorSelector,
-  currentPeriodSelector,
-  chartReducer
-};
+export { chartReducer };

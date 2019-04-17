@@ -10,7 +10,8 @@ import {
 } from "recompose";
 import { Input } from "antd";
 import debounce from "lodash.debounce";
-import { getRandomBondData, currentBondDataSelector } from "../../redux/bonds";
+import { currentBondDataSelector } from "../../selectors/bonds";
+import { getRandomBondData } from "../../actions/bonds";
 import { inputsConfig } from "../../config";
 
 const Search = Input.Search;

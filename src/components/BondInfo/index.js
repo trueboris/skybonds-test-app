@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Card } from "antd";
-import { currentBondDataSelector } from "../../redux/bonds";
+import { currentBondDataSelector } from "../../selectors/bonds";
 import isEmptyObject from "../../utils/isEmptyObject";
 import "./bond-info.css";
 
