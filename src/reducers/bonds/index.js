@@ -1,3 +1,8 @@
+import {
+  GET_BOND_DATA_SUCCESS,
+  GET_BOND_DATA_ERROR
+} from "../../constants/bonds";
+
 const initialState = { bondsData: [], currentBondData: {}, bondsDataError: {} };
 
 const handleBondsDataInReducer = (state, action) => ({
@@ -17,8 +22,8 @@ const handleBondDataErrorInReducer = (state, action) => ({
 
 const bondsReducer = (state = initialState, action) => {
   const handler = {
-    GET_BOND_DATA_SUCCESS: handleBondsDataInReducer,
-    GET_BOND_DATA_ERROR: handleBondDataErrorInReducer
+    [GET_BOND_DATA_SUCCESS]: handleBondsDataInReducer,
+    [GET_BOND_DATA_ERROR]: handleBondDataErrorInReducer
   }[action.type];
 
   return handler ? handler(state, action) : state;

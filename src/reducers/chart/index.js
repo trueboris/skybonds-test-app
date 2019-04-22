@@ -1,3 +1,4 @@
+import { SET_INDICATOR, SET_PERIOD} from '../../constants/chart'
 import { chartConfig } from "../../config";
 
 const initialState = {
@@ -19,8 +20,8 @@ const handleCurrentPeriodInReducer = (state, action) => ({
 
 const chartReducer = (state = initialState, action) => {
   const handler = {
-    SET_INDICATOR: handleCurrentIndicatorInReducer,
-    SET_PERIOD: handleCurrentPeriodInReducer
+    [SET_INDICATOR]: handleCurrentIndicatorInReducer,
+    [SET_PERIOD]: handleCurrentPeriodInReducer
   }[action.type];
 
   return handler ? handler(state, action) : state;
